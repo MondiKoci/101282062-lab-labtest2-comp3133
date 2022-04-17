@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-missionlist',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./missionlist.component.css']
 })
 export class MissionlistComponent implements OnInit {
+  missionList:any;
 
-  constructor() { }
+  constructor(private dataService: DataService) { 
+    this.dataService.getMissions().subscribe(data => {
+      this.missionList = data;
+    })
+  }
+  
 
   ngOnInit(): void {
   }
 
 }
+
