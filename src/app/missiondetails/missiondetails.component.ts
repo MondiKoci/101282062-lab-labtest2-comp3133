@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-missiondetails',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MissiondetailsComponent implements OnInit {
 
-  constructor() { }
+  
+  mission:any
+
+  constructor() { 
+    
+  }
+  onNotified(mission:any){
+    this.mission = mission;
+  }
+
+
 
   ngOnInit(): void {
   }

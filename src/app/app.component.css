@@ -1,11 +1,20 @@
 /* Navbar */
 
-a.nav{
-    color: #fff;
+li{
+    
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
     display: inline-block;
     transition: all 0.2s ease-in-out;
+}
+a{
+    background-color: rgb(4, 5, 48);
+    color: #cccccc;
+    padding:2px 5px 2px 5px;
+}
+a:hover{
+    background-color: #cccccc;
+    color: rgb(4, 5, 48);
 }

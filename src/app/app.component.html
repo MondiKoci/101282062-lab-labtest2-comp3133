@@ -2,13 +2,13 @@
 
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar" style="position:sticky !important;margin-botton:0px;;;margin-top:0px;z-index:999" role="banner">
   <span style="font-size:xx-large;padding-left:3px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">CLOSE CALL TO SPACE</span>
 
   <ul>
     <li><a class="nav" href="/">Home</a></li>
-    <li><a class="nav" href="/missionlist">Student</a></li>
-    <li><a class="nav" href="/missiondetails">Employee</a></li>
+    <li><a class="nav" href="/missionlist">Missions</a></li>
+    <!-- <li><a class="nav" href="/missiondetails">Employee</a></li> -->
   </ul>
 
 </div>
@@ -16,17 +16,15 @@
 <div class="content" role="main">
 
   
-  <router-outlet>
-
-  </router-outlet>
+  <router-outlet></router-outlet>
 
 
 <!-- <input type="text" [(ngModel)]="uId" />
 <button (click)="getUserById(uId)">Get User</button> -->
-<input type="number" min='1' name="missionId" placeholder="Enter mission id" id="missionId" #missionId/>
+<!-- <input type="number" min='1' name="missionId" placeholder="Enter mission id" id="missionId" #missionId/>
 <button (click)="getById(missionId.value)">Get</button>
 
- <img src={{mission?.links.mission_patch_small}}/> {{mission?.mission_id}}
+ <img src={{mission?.links.mission_patch_small}}/> {{mission?.mission_id}} -->
 
   
 

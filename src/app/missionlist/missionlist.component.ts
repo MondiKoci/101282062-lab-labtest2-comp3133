@@ -8,15 +8,19 @@ import { DataService } from '../shared/data.service';
 })
 export class MissionlistComponent implements OnInit {
   missionList:any;
-
+  
   constructor(private dataService: DataService) { 
-    this.dataService.getMissions().subscribe(data => {
+      this.dataService.getMissions().subscribe(data => {
       this.missionList = data;
     })
   }
   
 
-  ngOnInit(): void {
+  onNotified(mission:any){
+    this.missionList = mission;
+  }
+  ngOnInit() {
+    
   }
 
 }

@@ -10,12 +10,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { ChildComponent } from './child/child.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MissionlistComponent,
     MissiondetailsComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

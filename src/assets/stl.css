@@ -34,7 +34,8 @@
     align-items: center;
     background-color: #1976d2;
     color: white;
-    font-weight: 600;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .toolbar img {
@@ -262,7 +263,6 @@
     width:100%;
     max-width:600px;
     padding:4px 15px 15px 15px;
-    background-color: #0f4b85;
   }
   .description{
     width: 250px;
