@@ -10,24 +10,24 @@
           </div>
           <div class="tytleHolder">
             <mat-card-title style="margin-left:30px;margin-top:5px;font-size:28px">
-              Mission Name Is here
+              {{misssion?.mission_name}}
             </mat-card-title>
             <mat-card-subtitle style="margin-left:35px;font-weight:700">
-              Name: Smaller Name<br>
-              Launch Year: 20165
+              Mission name: {{misssion?.mission_name}}<br>
+              Launch year: {{misssion?.launch_year}}
             </mat-card-subtitle>
             <mat-card-title style="margin-left:30px;margin-top:5px;font-size:28px">
               Rocket
             </mat-card-title>
             <mat-card-subtitle style="margin-left:35px;font-weight:700">
-              Name: Falcon 9<br>
-              Type: v1.1
+              Rocket Name: {{misssion?.rocket.rocket_name}}<br>
+              Rocket Type: {{misssion?.rocket.rocket_type}}
             </mat-card-subtitle>
             <mat-card-title style="margin-left:30px;margin-top:5px;font-size:28px">
               Launch Site
             </mat-card-title>
             <mat-card-subtitle style="margin-left:35px;font-weight:700">
-              Name: Cape Canaveral Air FOrce Space Launch
+              Name: {{misssion?.launch_site.site_name_long}}
             </mat-card-subtitle>
           </div>
       </mat-card-header>
@@ -35,10 +35,16 @@
         <mat-card-title>
           Launch Details
         </mat-card-title>
-        <p style="font-size:17px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">{{ mission?.details? mission.details : "No details for this mission."}}
-
-          sdfasdgjjjjjjjjjjjjjjjjjjjhkl as;dghhhhhhhhsjk;ghask;sdfasdgjjjjjjjjjjjjjjjjjjjhkl as;dghhhhhhhhsjk;ghask;sdfasdgjjjjjjjjjjjjjjjjjjjhkl as;dghhhhhhhhsjk;ghask;sdfasdgjjjjjjjjjjjjjjjjjjjhkl as;dghhhhhhhhsjk;ghask;sdfasdgjjjjjjjjjjjjjjjjjjjhkl as;dghhhhhhhhsjk;ghask;
-        </p>
+        <p style="font-size:17px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">{{ misssion?.details? misssion.details : "No details for this mission."}}
+          {{misssion?.details}}
+        </p><br>
+        <h2>More Info on Launch Details</h2>
+        <div class="icons">
+          <a class="links web" href="{{misssion?.links.article_link}}">Article</a>
+          <a class="links youtube" href="{{misssion?.links.video_link}}">Youtube</a>
+          <a class="links wiki" href="{{misssion?.links.wikipedia}}">Wikipedia</a>
+        </div>
+        
       </mat-card-content>
       <mat-card-footer style="padding-right:30px;">
         <mat-card-actions align="end">

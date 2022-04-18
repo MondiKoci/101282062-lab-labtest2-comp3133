@@ -1,1 +1,29 @@
- <a href="/missiondetails"></a> 
+
+<div class="mission-holder">
+    <div class="card-container">
+    <mat-card style="width:100%;max-width:700px;background-color:#88cdfa">
+        <mat-card-header style="display:flex;flex-direction:row">
+            <div>
+            <img src={{mission?.links.mission_patch_small}} style="width:100%;max-width:90px">
+            </div>
+            <div class="tytleHolder">
+            <mat-card-title style="margin-left:30px;margin-top:5px;font-size:28px">
+                {{mission.mission_name}}
+            </mat-card-title>
+            <mat-card-subtitle style="margin-left:35px;font-weight:700">
+                {{ mission?.launch_year}}
+            </mat-card-subtitle>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+        <p style="font-size:17px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">{{ mission?.details? mission.details : "No details for this mission."}}</p>
+        </mat-card-content>
+        <mat-card-footer style="padding-right:30px;">
+        <mat-card-actions align="end">
+        </mat-card-actions>
+        </mat-card-footer>
+        <a class="view" [routerLink]="['/missiondetails', mission.flight_number]" >View Mission</a>
+    </mat-card>
+    </div>
+</div>
+  

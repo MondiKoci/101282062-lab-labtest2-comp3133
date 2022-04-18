@@ -8,19 +8,16 @@ import { DataService } from '../shared/data.service';
   styleUrls: ['./missiondetails.component.css']
 })
 export class MissiondetailsComponent implements OnInit {
+  misssion:any
+  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
-  
-  mission:any
-
-  constructor() { 
-    
+  constructor(private dataService: DataService, private aRoute: ActivatedRoute){
+    let id = this.aRoute.snapshot.params['id']
+    let d = this.dataService.getMissionByNumber(id).subscribe( (data) => {
+      this.misssion = data
+      console.log(data)
+    })
   }
-  onNotified(mission:any){
-    this.mission = mission;
-  }
-
-
-
   ngOnInit(): void {
   }
 

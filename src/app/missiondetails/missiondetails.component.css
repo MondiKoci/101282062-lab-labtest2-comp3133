@@ -1,0 +1,24 @@
+.links{
+    margin:4px 0px 0px 7px; 
+    padding:4px;
+    
+    color:white
+}
+.web{
+    background-color:blue;
+}
+.youtube{
+    background-color: red;
+}
+.wiki{
+    background-color: aquamarine;
+    color:#333;
+}
+.icons{
+    height:80px;
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    align-items:flex-start;
+    justify-content: left;
+}

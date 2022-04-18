@@ -9,9 +9,6 @@ import { retry, throwError, catchError } from 'rxjs';
 })
 export class DataService {
 
-  //Get user with id = 1
-  //'https://jsonplaceholder.typicode.com/users/1'
-
   private BASE_URL = 'https://api.spacexdata.com/v3/launches'
 
   constructor(private httpClient: HttpClient) {
@@ -40,6 +37,7 @@ export class DataService {
 
   //get user by id
   getMissionByNumber(mId: string){
+    console.log("GetMissionByNumber")
    return this.httpClient.get(`${this.BASE_URL}/${mId}`)
   }
 

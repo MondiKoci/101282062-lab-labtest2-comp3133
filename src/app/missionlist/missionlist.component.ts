@@ -14,8 +14,6 @@ export class MissionlistComponent implements OnInit {
       this.missionList = data;
     })
   }
-  
-
   onNotified(mission:any){
     this.missionList = mission;
   }
