@@ -1,3 +1,6 @@
+//Mondi Koci
+//101282062
+//Date: 2022-04-17
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 
